@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOYLEN</title>
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="promotion" class="promotion">
+        <div></div>
+        <div>
+            <p class="promotion__text">Бесплатная доставка при заказе от 10 000 руб по Москве и Московской области</p>
+        </div>
+        <div class="promotion__cross">
+            <a onclick="closeDiv()"><img src="img/cross.svg" alt=""></a>
+        </div>
+    </section>
+    <section class="header">
+        <div class="header__burger-menu" onclick="burgerList()">
+            <img src="img/burger-menu.svg" alt="">
+        </div>
+        <div class="header__burger-list">
+            <a href="#catalog" class="header__nav-item list-item">Каталог</a>
+            <a href="#lookbook" class="header__nav-item list-item">lookbook</a>
+            <a href="#about-us" class="header__nav-item list-item">О бренде</a>
+            <a href="#info" class="header__nav-item list-item">информация</a>
+        </div>
+        <div class="header__nav">
+            <a href="#catalog" class="header__nav-item">Каталог</a>
+            <a href="#lookbook" class="header__nav-item">lookbook</a>
+            <a href="#about-us" class="header__nav-item">О бренде</a>
+            <a href="#info" class="header__nav-item">информация</a>
+        </div>
+        <div class="header__logo">
+            <a href="/index.html"><img src="img/logo.svg" alt=""></a>
+        </div>
+        <div class="header__menu">
+            <img class="header__menu-item" src="img/search.svg" alt="">
+            <img class="header__menu-item" src="img/user.svg" alt="">
+            <img class="header__menu-item" src="img/favourite-2.svg" alt="">
+            <div class="header__menu-item">
+                <img src="img/cart.svg" alt="">
+                <p id="likes" class="header__text">0</p>
+            </div>
+        </div>
+    </section>
+    <section class="main-section">
+        <div class="main-section__grid">
+            <div class="main-section__autumn-block">
+                <p class="main-section__autumn-2021">ОСЕНЬ 2021</p>
+                <a href="#catalog"><button class="main-section__button">В каталог</button></a>
+            </div>
+            <div class="main-section__new-products-block">
+                <p class="main-section__text">НОВИНКИ</p>
+                <a href="#catalog"><button class="main-section__button-2">СМОТРЕТЬ</button></a>
+            </div>
+            <div class="main-section__sale-block">
+                <p class="main-section__text">РАСПРОДАЖА</p>
+                <a href="#catalog"><button class="main-section__button-2">СМОТРЕТЬ</button></a>
+            </div>
+        </div>
+    </section>
+    <section class="catalog" id="catalog">
+        <div class="catalog__header">
+            <p class="catalog__header-text">КАТАЛОГ</p>
+            <div class="catalog__filter">
+                <a class="catalog__filter-item" data-f="all">все</a>
+                <a class="catalog__filter-item" data-f="hit">хит продаж</a>
+                <a class="catalog__filter-item" data-f="new">новинка</a>
+                <a class="catalog__filter-item" data-f="sale">распродажа</a>
+            </div>
+        </div>
+        <div class="catalog__grid-row">
+            <div class="catalog__block hit">
+                <div class="catalog__block_header block-bomber">
+                    <button class="catalog__hit-button">хит продаж</button>
+                    <img class="catalog__favourite" id="favourite-active1" onclick="favourite1()" src="img/favourite.svg" alt="">
+                </div>
+                <div class="catalog__block_name">
+                    <p class="catalog__product-name">Бомбер</p>
+                    <p class="catalog__product-price">5 000 ₽</p>
+                </div>
+            </div>
+            <div class="catalog__block new">
+                <div class="catalog__block_header block-leather-jacket">
+                    <button class="catalog__new-product-button">новинка</button>
+                    <img class="catalog__favourite" id="favourite-active2" onclick="favourite2()" src="img/favourite.svg" alt="">
+                </div>
+                <div class="catalog__block_name">
+                    <p class="catalog__product-name">Кожаная куртка</p>
+                    <p class="catalog__product-price">12 000 ₽</p>
+                </div>
+            </div>
+            <div class="catalog__block long">
+                <div class="catalog__block_header block-trench block-favourite">
+                    <img class="catalog__favourite" id="favourite-active3" onclick="favourite3()" src="img/favourite.svg" alt="">
+                </div>
+                <div class="catalog__block_name">
+                    <p class="catalog__product-name">Тренч</p>
+                    <p class="catalog__product-price">4 000 ₽</p>
+                </div>
+            </div>
+            <div class="catalog__block sale">
+                <div class="catalog__block_header block-shirt">
+                    <button class="catalog__sale-button">распродажа</button>
+                    <img class="catalog__favourite" id="favourite-active4" onclick="favourite4()" src="img/favourite.svg" alt="">
+                </div>
+                <div class="catalog__block_name">
+                    <p class="catalog__product-name">Рубашка</p>
+                    <div class="catalog__product-price-block">
+                        <p class="catalog__product-price">4 500 ₽</p>
+                        <p class="catalog__product-price-lined">5 000 ₽</p>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__block">
+                <div class="catalog__block_header block-dress block-favourite">
+                    <img class="catalog__favourite" id="favourite-active5" onclick="favourite5()" src="img/favourite.svg" alt="">
+                </div>
+                <div class="catalog__block_name">
+                    <p class="catalog__product-name">Платье</p>
+                    <p class="catalog__product-price">8 000 ₽</p>
+                </div>
+            </div>
+            <div class="catalog__block long sale">
+                <div class="catalog__block_header block-home-kit">
+                    <button class="catalog__sale-button">распродажа</button>
+                    <img class="catalog__favourite" id="favourite-active6" onclick="favourite6()" src="img/favourite.svg" alt="">
+                </div>
+                <div class="catalog__block_name">
+                    <p class="catalog__product-name">Домашний комплект</p>
+                    <div class="catalog__product-price-block">
+                        <p class="catalog__product-price">4 500 ₽</p>
+                        <p class="catalog__product-price-lined">5 000 ₽</p>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__block">
+                <div class="catalog__block_header block-base-turtleneck block-favourite">
+                    <img class="catalog__favourite" id="favourite-active7" onclick="favourite7()" src="img/favourite.svg" alt="">
+                </div>
+                <div class="catalog__block_name">
+                    <p class="catalog__product-name">Базовая водолазка</p>
+                    <p class="catalog__product-price">3 000 ₽</p>
+                </div>
+            </div>
+            <div class="catalog__block">
+                <div class="catalog__block_header block-base-T-shirt block-favourite">
+                    <img class="catalog__favourite" id="favourite-active8" onclick="favourite8()" src="img/favourite.svg" alt="">
+                </div>
+                <div class="catalog__block_name">
+                    <p class="catalog__product-name">Базовая футболка</p>
+                    <p class="catalog__product-price">2 000 ₽</p>
+                </div>
+            </div>
+            <div class="catalog__block long">
+                <div class="catalog__block_header block-classic-trousers block-favourite">
+                    <img class="catalog__favourite" id="favourite-active9" onclick="favourite9()" src="img/favourite.svg" alt="">
+                </div>
+                <div class="catalog__block_name">
+                    <p class="catalog__product-name">Классические брюки</p>
+                    <p class="catalog__product-price">5 000 ₽</p>
+                </div>
+            </div>
+        </div>
+        <div class="catalog__main-button">
+            <button class="catalog__look-more-button">посмотреть все</button>
+        </div>
+    </section>
+    <section class="lookbook" id="lookbook">
+        <div class="lookbook__img"></div>
+        <div class="lookbook__content">
+            <p class="lookbook__header">LOOKBOOK</p>
+            <p class="lookbook__text">При создании коллекций мы учитываем, чтобы все изделия сочетались. Это позволяет подобрать полный образ на все случаи жизни</p>
+            <p class="lookbook__text">Скидка 10% при покупке полного образа</p>
+            <div class="lookbook__button-block">
+                <button class="lookbook__button">Смотреть</button>
+            </div>
+        </div>
+    </section>
+    <section class="instagram" id="about-us">
+        <div class="instagram__header">
+            <p class="instagram__first-head">НАШ ИНСТАГРАМ</p>
+            <p class="instagram__second-head">@loylen_brand</p>
+        </div>
+        <div class="instagram__slider">
+            <div class="instagram__photos">
+                <img class="instagram__photo" src="img/insta-img-1.png" alt="">
+                <img class="instagram__photo" src="img/insta-img-2.png" alt="">
+                <img class="instagram__photo" src="img/insta-img-3.png" alt="">
+                <img class="instagram__photo" src="img/insta-img-4.png" alt="">
+                <img src="img/insta-img-5.png" alt="" class="instagram__photo">
+                <img class="instagram__photo" src="img/insta-img-1.png" alt="">
+                <img class="instagram__photo" src="img/insta-img-2.png" alt="">
+                <img class="instagram__photo" src="img/insta-img-3.png" alt="">
+            </div>
+            <div class="instagram__buttons">
+                <button class="instagram__prev"><img src="img/arrow.svg" alt=""></button>
+                <button class="instagram__next"><img src="img/arrow-2.svg" alt=""></button>
+            </div>
+        </div>
+    </section>
+    <section class="footer" id="info">
+        <div class="footer__left">
+            <div class="footer__logo">
+                <img src="img/main-logo.svg" alt="">
+            </div>
+            <p class="footer__header-left">Нужна помощь с заказом?</p>
+            <p class="footer__header">+ 7 964 705 94 64</p>
+            <p class="footer__site">info@loylen.com</p>
+            <p class="footer__small-text">2021 Интернет-магазин LOYLEN</p>
+            <p class="footer__small-text">Все права защищены</p>
+            <p class="footer__small-text">Разработка дизайна</p>
+        </div>
+        <div class="footer__right">
+            <p class="footer__discription">Подпишитесь на рассылку и первыми получайте информацию <br> о новинках, скидках и специальных предложениях</p>
+            <div class="footer__subscribe-form">
+                <input id='E-mail' class="footer__input" type="text" placeholder="Введите ваш E-mail">
+                <button onclick="subscribe()" class="footer__button">подписаться</button>
+            </div>
+            <div class="footer__menu">
+                <div class="footer__column">
+                    <div class="footer__header-top" onclick="akardeonCat()">
+                        <p class="footer__header-right">Каталог</p>
+                        <img class="footer__akardeon-cat" src="img/arrow-akardeon.svg" alt="">
+                    </div>
+                    <div class="footer__points-cat">
+                        <a href="" class="footer__small-text">Новинки</a>
+                        <a href="" class="footer__small-text">Распродажа</a>
+                        <a href="" class="footer__small-text">Готовые образы</a>
+                        <a href="" class="footer__small-text">Все товары</a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <div class="footer__header-top" onclick="akardeonSell()">
+                        <p class="footer__header-right">Покупателям</p>
+                        <img class="footer__akardeon-sell" src="img/arrow-akardeon.svg" alt="">
+                    </div>
+                    <div class="footer__points-sell">
+                        <a href="" class="footer__small-text">Личный кабинет</a>
+                        <a href="" class="footer__small-text">Таблица размеров</a>
+                        <a href="" class="footer__small-text">Доставка и оплата</a>
+                        <a href="" class="footer__small-text">Возврат</a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <div class="footer__header-top" onclick="akardeonUs()">
+                        <p class="footer__header-right">О нас</p>
+                        <img class="footer__akardeon-us" src="img/arrow-akardeon.svg" alt="">
+                    </div>
+                    <div class="footer__points-us">
+                        <a href="" class="footer__small-text">О бренде</a>
+                        <a href="" class="footer__small-text">Контакты</a>
+                        <a href="" class="footer__small-text">Оферта</a>
+                        <a href="" class="footer__small-text">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/script/promotion-script.js"></script>
+    <script src="/script/favourite.js"></script>
+    <script src="/script/subscribe.js"></script>
+    <script src="/script/slider.js"></script>
+    <script src="/script/sorting.js"></script>
+    <script src="/script/burger.js"></script>
+    <script src="/script/akardeon.js"></script>
+</body>
+</html>
